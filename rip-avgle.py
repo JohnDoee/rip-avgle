@@ -20,8 +20,8 @@ def extract_m3u8_url(video_url):
         'alekzonder/puppeteer:latest',
         'node', 'index.js',
         video_url
-    ], universal_newlines=True)
-    video_info = json.loads(video_info)
+    ])
+    video_info = json.loads(video_info.decode('utf-8', 'ignore'))
 
     url = video_info['url']
     title = video_info['title'].split('>')[-1].strip()
