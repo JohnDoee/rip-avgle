@@ -36,7 +36,7 @@ def download_m3u8(m3u8_url, target_file):
     cmd = ['ffmpeg']
 
     if 'ahcdn.com' not in m3u8_url:
-        cmd += ['-headers', 'Referer: http://www.avg' + 'le.com',]
+        cmd += ['-headers', 'Referer: http://avg' + 'le.com',]
 
     cmd += [
         '-i', m3u8_url,
